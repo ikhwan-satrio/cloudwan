@@ -69,7 +69,16 @@
 			}}
 		/>
 	</div>
-	<Button.Root type="submit" disabled={uploadForm.state.isSubmitting} class="w-full sm:w-auto">
-		{uploadForm.state.isSubmitting ? 'Uploading...' : 'Upload'}
-	</Button.Root>
+	<uploadForm.Subscribe
+		selector={(state) => ({
+			canSubmit: state.canSubmit,
+			isSubmitting: state.isSubmitting
+		})}
+	>
+		{#snippet children({ isSubmitting })}
+			<Button.Root type="submit" disabled={isSubmitting} class="w-full sm:w-auto">
+				{isSubmitting ? 'Uploading...' : 'Upload'}
+			</Button.Root>
+		{/snippet}
+	</uploadForm.Subscribe>
 </form>
