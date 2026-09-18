@@ -13,7 +13,7 @@ export const POST: RequestHandler = async ({ request, locals: { user, supabaseAd
 		return json({ error: 'No file selected' }, { status: 400 });
 	}
 
-	const filePath = user.id + '/' + file.name;
+	const filePath = user.email + '/' + file.name;
 	const { error } = await supabaseAdmin.storage.from('cloudwan').upload(filePath, file, {
 		upsert: true
 	});

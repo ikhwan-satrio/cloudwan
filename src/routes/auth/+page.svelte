@@ -9,6 +9,10 @@
 	import AuthTabs from '$lib/features/auth/auth-tabs.svelte';
 </script>
 
+<svelte:head>
+	<title>CloudWan - auth</title>
+</svelte:head>
+
 <div class="flex min-h-screen items-center justify-center bg-background px-4 py-8">
 	<Card class="w-full max-w-sm">
 		<CardHeader class="text-center">

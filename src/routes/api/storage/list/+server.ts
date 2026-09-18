@@ -6,7 +6,7 @@ export const GET: RequestHandler = async ({ locals: { user, supabaseAdmin } }) =
 		return json({ error: 'Not authenticated' }, { status: 401 });
 	}
 
-	const folder = user.id + '/';
+	const folder = user.email + '/';
 	const { data: files, error } = await supabaseAdmin.storage.from('cloudwan').list(folder, {
 		sortBy: { column: 'created_at', order: 'desc' },
 		limit: 100
