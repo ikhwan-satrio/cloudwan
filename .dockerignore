@@ -1,0 +1,11 @@
+.git
+.jj
+.gitignore
+node_modules
+.env
+.env.local
+.svelte-kit
+.vscode
+
+*.test.js
+*.test.ts

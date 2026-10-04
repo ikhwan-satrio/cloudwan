@@ -21,8 +21,6 @@
 				toast.error(error.message);
 				return;
 			}
-
-			window.location.href = '/api/auth/callback';
 		}
 	}));
 </script>

@@ -41,6 +41,7 @@
 	"dependencies": {
 		"@supabase/ssr": "^0.12.7",
 		"@supabase/supabase-js": "^2.116.0",
+		"@sveltejs/adapter-node": "^5.5.7",
 		"@tanstack/svelte-form": "^1.33.5",
 		"@tanstack/svelte-query": "^6.1.48",
 		"@tanstack/svelte-query-devtools": "^6.1.48",
